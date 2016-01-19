@@ -14,4 +14,12 @@ describe("leapYear", function(){
   it("is true for years divisible by 400", function(){
     expect(leapYear(2000)).to.equal(true);
   });
+
+  it("is false if it is text", function(){
+    expect(leapYear("d")).to.equal(false);
+  });
+
+  it("is false if it is blank", function(){
+    expect(leapYear("")).to.equal(false);
+  });
 });
